@@ -6,9 +6,8 @@ package lk.ijse.ds.linkedlist;
 */
 
 import java.util.*;
-import java.util.LinkedList;
 
-public class ArrayListVsLinkedList {
+public class ListVsSet {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
 
