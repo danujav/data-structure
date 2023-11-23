@@ -28,5 +28,7 @@ public class Main {
 
         ll.deleteAtPosition(1);
         ll.traverse(); //[20, 10]
+
+        System.out.println("size: " + ll.size());
     }
 }
