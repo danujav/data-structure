@@ -22,5 +22,8 @@ public class Main {
         queue.printQueue(); //[20, 30]
 
         System.out.println("Peeked: " + queue.peek()); //20
+
+        queue.clear();
+        queue.printQueue(); //[Empty queue]
     }
 }

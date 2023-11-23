@@ -55,11 +55,20 @@ public class Queue {
         return elementData[front];
     }
 
+    public void clear() {
+        front = -1;
+        rear = -1;
+    }
+
     public void printQueue() {
         System.out.print("[");
+        if(isEmpty()) {
+            System.out.println("Empty queue]");
+            return;
+        }
         for (int i = front; i <= rear; i++) {
             System.out.print(elementData[i] + ", ");
         }
-        System.out.println(isEmpty() ? "Empty queue]" : "\b\b]");
+        System.out.println("\b\b]");
     }
 }
