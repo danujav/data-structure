@@ -15,6 +15,11 @@ public class Stack {
     }
 
     public void push(int data) {
+        if (isFull()) {
+//            throw new RuntimeException("Stack is full");
+            System.err.println("Stack is full");
+            return;
+        }
         elementData[++top] = data;
     }
 
@@ -29,6 +34,11 @@ public class Stack {
     public int size() {
         return top + 1;
     }
+
+    public boolean isFull() {
+        return top == elementData.length - 1;
+    }
+
     public void printStack() {
         System.out.print("[");
         for (int i = 0; i <= top; i++) {

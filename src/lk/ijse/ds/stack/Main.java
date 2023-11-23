@@ -12,6 +12,9 @@ public class Main {
         stack.push(10);
         stack.push(20);
         stack.push(30);
+        stack.push(40);
+        stack.push(50);
+        stack.push(60);
 
         System.out.println("Peeked: " + stack.peek());
         System.out.println("size: " + stack.size()); //3
