@@ -10,16 +10,37 @@ public class Queue {
     private int front;
     private int rear;
 
-    public Queue(final int initialCapacity){
+    public Queue(final int initialCapacity) {
         elementData = new int[initialCapacity];
         front = -1;
         rear = -1;
     }
 
     public void enQueue(int data) {
-        if(front == -1)
+        if (isFull()) {
+            grow();
+        }
+        if (front == -1)
             front = 0;
         elementData[++rear] = data;
+    }
+
+    private boolean isFull() {
+        return rear == elementData.length - 1 || front > rear;
+    }
+
+    private void grow() {
+        int[] temp = elementData;
+        elementData = new int[temp.length * 2];
+        System.arraycopy(temp, 0, elementData, 0, temp.length);
+    }
+
+    public int deQueue() {
+        return elementData[front++];
+    }
+
+    public int peek() {
+        return elementData[front];
     }
 
     public void printQueue() {
@@ -27,6 +48,6 @@ public class Queue {
         for (int i = front; i <= rear; i++) {
             System.out.print(elementData[i] + ", ");
         }
-        System.out.print("\b\b]");
+        System.out.println("\b\b]");
     }
 }
