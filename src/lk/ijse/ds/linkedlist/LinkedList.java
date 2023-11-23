@@ -32,8 +32,12 @@ public class LinkedList {
     }
 
     public void insertAtEnding(int data) {
-        Node node = new Node(data);
+        if(head == null){
+            insertAtBeginning(data);
+            return;
+        }
 
+        Node node = new Node(data);
         Node temp = head;
         while (temp.next != null) {
             temp = temp.next;

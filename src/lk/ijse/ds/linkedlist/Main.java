@@ -9,6 +9,8 @@ public class Main {
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
 
+        ll.insertAtEnding(400);
+
         ll.insertAtBeginning(10);
         ll.insertAtBeginning(20);
         ll.insertAtBeginning(30);
