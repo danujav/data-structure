@@ -57,6 +57,10 @@ public class Stack {
         return top == -1;
     }
 
+    public void clear() {
+        top = -1;
+    }
+
     public void printStack() {
         System.out.print("[");
         for (int i = 0; i <= top; i++) {

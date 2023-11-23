@@ -37,5 +37,13 @@ public class Main {
         stack.printStack();
 
         stack.pop();
+
+        stack.push(100);
+        stack.push(200);
+
+        stack.printStack(); //[100, 200]
+
+        stack.clear();
+        stack.printStack(); //[Empty stack]
     }
 }
