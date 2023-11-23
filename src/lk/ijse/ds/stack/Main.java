@@ -13,6 +13,8 @@ public class Main {
         stack.push(20);
         stack.push(30);
 
+        System.out.println("Peeked: " + stack.peek());
+
         stack.printStack();
 
         System.out.println("Popped: " + stack.pop());
@@ -20,5 +22,7 @@ public class Main {
 
         System.out.println("Popped: " + stack.pop());
         stack.printStack();
+
+        System.out.println("Peeked: " + stack.peek());
     }
 }

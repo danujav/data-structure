@@ -22,6 +22,10 @@ public class Stack {
         return elementData[top--];
     }
 
+    public int peek() { //top
+        return elementData[top];
+    }
+
     public void printStack() {
         System.out.print("[");
         for (int i = 0; i <= top; i++) {
