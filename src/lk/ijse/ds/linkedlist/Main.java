@@ -30,5 +30,8 @@ public class Main {
         ll.traverse(); //[20, 10]
 
         System.out.println("size: " + ll.size());
+
+        ll.clear();
+        ll.traverse(); //[Empty list]
     }
 }

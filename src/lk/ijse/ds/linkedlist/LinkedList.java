@@ -110,6 +110,10 @@ public class LinkedList {
         return count;
     }
 
+    public void clear() {
+        head = null;
+    }
+
     public void traverse() {
         System.out.print("[");
 
@@ -118,6 +122,6 @@ public class LinkedList {
             System.out.print(temp.data + ", ");
             temp = temp.next;
         }
-        System.out.println("\b\b]");
+        System.out.println(head == null ? "Empty list]" : "\b\b]");
     }
 }
