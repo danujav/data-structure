@@ -15,5 +15,10 @@ public class Main {
 
         stack.printStack();
 
+        System.out.println("Popped: " + stack.pop());
+        stack.printStack();
+
+        System.out.println("Popped: " + stack.pop());
+        stack.printStack();
     }
 }

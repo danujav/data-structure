@@ -18,6 +18,10 @@ public class Stack {
         elementData[++top] = data;
     }
 
+    public int pop() {
+        return elementData[top--];
+    }
+
     public void printStack() {
         System.out.print("[");
         for (int i = 0; i <= top; i++) {
