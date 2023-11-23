@@ -60,6 +60,10 @@ public class Queue {
         rear = -1;
     }
 
+    public int size() {
+        return rear - front + 1;
+    }
+
     public void printQueue() {
         System.out.print("[");
         if(isEmpty()) {

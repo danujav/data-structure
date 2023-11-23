@@ -16,6 +16,8 @@ public class Main {
         queue.enQueue(50);
         queue.enQueue(60);
 
+        System.out.println("size: " + queue.size());
+
         queue.printQueue(); //[10, 20, 30]
 
         System.out.println("deQueued: " + queue.deQueue());
