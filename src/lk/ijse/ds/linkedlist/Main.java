@@ -22,5 +22,8 @@ public class Main {
 
         ll.deleteAtBeginning();
         ll.traverse();
+
+        ll.deleteAtEnding();
+        ll.traverse();
     }
 }
