@@ -36,10 +36,22 @@ public class Queue {
     }
 
     public int deQueue() {
+        if(isEmpty()) {
+            System.err.println("Queue is empty");
+            return -1;
+        }
         return elementData[front++];
     }
 
+    private boolean isEmpty() {
+        return front == -1 || front > rear;
+    }
+
     public int peek() {
+        if (isEmpty()) {
+            System.err.println("Queue is empty");
+            return -1;
+        }
         return elementData[front];
     }
 
@@ -48,6 +60,6 @@ public class Queue {
         for (int i = front; i <= rear; i++) {
             System.out.print(elementData[i] + ", ");
         }
-        System.out.println("\b\b]");
+        System.out.println(isEmpty() ? "Empty queue]" : "\b\b]");
     }
 }
