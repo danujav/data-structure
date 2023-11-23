@@ -16,11 +16,21 @@ public class Stack {
 
     public void push(int data) {
         if (isFull()) {
+            grow();
 //            throw new RuntimeException("Stack is full");
-            System.err.println("Stack is full");
-            return;
+            /*System.err.println("Stack is full");
+            return;*/
         }
         elementData[++top] = data;
+    }
+
+    private void grow() {
+        int[] temp = elementData;
+
+        elementData = new int[elementData.length * 2];
+        for (int i = 0; i < temp.length; i++) {
+            elementData[i] = temp[i];
+        }
     }
 
     public int pop() {
