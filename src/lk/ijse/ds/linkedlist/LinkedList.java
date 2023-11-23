@@ -61,12 +61,34 @@ public class LinkedList {
     }
 
     public void deleteAtEnding() {
+        if(head == null) {
+            System.err.println("List is empty");
+            return;
+        }
         Node temp = head;
 
         while(temp.next.next != null) {
             temp = temp.next;
         }
         temp.next = null;
+    }
+
+    public void deleteAtPosition(int position) {
+        if(head == null) {
+            System.err.println("List is empty");
+            return;
+        }
+
+        if(position == 0) {
+            deleteAtBeginning();
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < position - 1; i++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
     }
 
     public void traverse() {

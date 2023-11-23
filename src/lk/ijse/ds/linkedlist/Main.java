@@ -24,6 +24,9 @@ public class Main {
         ll.traverse();
 
         ll.deleteAtEnding();
-        ll.traverse();
+        ll.traverse(); //[20, 25, 40]
+
+        ll.deleteAtPosition(1);
+        ll.traverse(); //[20, 10]
     }
 }
