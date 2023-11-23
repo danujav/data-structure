@@ -44,4 +44,15 @@ public class LinkedList {
         }
         temp.next = node;
     }
+
+    public void traverse() {
+        System.out.print("[");
+
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data + ", ");
+            temp = temp.next;
+        }
+        System.out.println("\b\b]");
+    }
 }
