@@ -31,6 +31,13 @@ public class Main {
 
         System.out.println("size: " + ll.size());
 
+        ll.insertAtEnding(100);
+
+        ll.traverse();  //[20, 10, 100]
+
+        int data = ll.get(0);
+        System.out.println("data: " + data); //10
+
         ll.clear();
         ll.traverse(); //[Empty list]
     }

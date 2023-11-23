@@ -114,6 +114,19 @@ public class LinkedList {
         head = null;
     }
 
+    public int get(int position) {
+        if(head == null) {
+            System.err.println("List is empty");
+            return -1;
+        }
+
+        Node temp = head;
+        for (int i = 0; i < position; i++) {
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+
     public void traverse() {
         System.out.print("[");
 
