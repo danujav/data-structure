@@ -60,6 +60,15 @@ public class LinkedList {
         temp.next = node;
     }
 
+public void deleteAtBeginning() {
+        if(head == null) {
+            System.err.println("List is empty");
+            return;
+        }
+        head = head.next;
+    }
+
+
     public void traverse() {
         System.out.print("[");
 

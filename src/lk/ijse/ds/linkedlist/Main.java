@@ -17,8 +17,10 @@ public class Main {
 
         ll.traverse();
 
-        ll.insertAtPosition(32, 0);
         ll.insertAtPosition(25, 2);
         ll.traverse(); //
+
+        ll.deleteAtBeginning();
+        ll.traverse();
     }
 }
