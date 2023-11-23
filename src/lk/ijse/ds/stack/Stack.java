@@ -26,6 +26,9 @@ public class Stack {
         return elementData[top];
     }
 
+    public int size() {
+        return top + 1;
+    }
     public void printStack() {
         System.out.print("[");
         for (int i = 0; i <= top; i++) {
